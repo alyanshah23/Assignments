@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- the last chapter -->
+    <h1>
+        using rows span
+    </h1>
+    <table border="1">
+        <tr>
+            <td rowspan="4">
+                User info
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>john abraham</td>
+            <td>john@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>gandhi abraham</td>
+            <td>gandhi@gmail.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>nehru lal abraham</td>
+            <td>nehrulal@gmail.com</td>
+        </tr>
+    </table>
+    <h1>using colspan</h1>
+    <table border="1">
+        <tr>
+            <td colspan="3">
+                <center>user info</center>
+            </td>
+        </tr>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>john abraham</td>
+                <td>john@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>gandhi abraham</td>
+                <td>gandhi@gmail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>nehru lal abraham</td>
+                <td>nehrulal@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>fruit juice drinks and meals</h1>
+    <table border="1">
+        <tr>
+            <td rowspan="2">
+                <pre>              </pre>
+            </td>
+            <td colspan="3">fruit juice drinks</td>
+
+        </tr>
+        <tr>
+
+            <td>apple</td>
+            <td>orange</td>
+            <td>kiwi</td>
+        </tr>
+        <tr>
+            <td>breakfast</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>lunch</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>dinner</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+        </tr>
+    </table>
+    <br><br><br>
+    <form action="">
+        <label for="user">username</label>
+        <input type="text" name="text" id="text" placeholder="dont enter your name">
+        <br><br>
+        <label for="pwd">password</label>
+        <input type="password" name="pwd" id="pwd" placeholder="enter password"><br>
+        <input type="submit" value="login"><input type="reset" value="cancel"><br><br>
+        <input type="checkbox" name="me" id="me"><label for="me">remember me</label><br>
+        <label for="forgot">forget </label><a href="#">password</a>
+    </form>
+    <!-- table made in sir Sammar's class -->
+    <h1>
+        creating time table
+    </h1>
+    <table border="1px" cellspacing="0" cellpodding="0">
+        <caption> Time Table for class 12 for Week 1 Date:05-09-25
+            <pre>Degree College Sukkur                                                        <b> CREATED BY : ALYAN SHAH</b>                                                                          </pre>
+        </caption>
+
+        <thead>
+            <tr>
+                <th>
+                    <pre>         </pre>
+                </th>
+                <th>
+                    <pre>       1    <br> 9:00 to 9:40  </pre>
+                </th>
+                <th>
+                    <pre>       2   <br> 9:40 to 10:20  </pre>
+                </th>
+                <th>
+                    <pre>       1    <br> 10:20 to 10:40 </pre>
+                </th>
+                <th>
+                    <pre>       3    <br> 10:40 to 11:20 </pre>
+                </th>
+                <th>
+                    <pre>       2    <br> 11:20 to 11:40 </pre>
+                </th>
+                <th>
+                    <pre>       4    <br> 11:40 to 12:20 </pre>
+                </th>
+                <th>
+                    <pre>       3    <br> 12:20 to 1:30  </pre>
+                </th>
+                <th>
+                    <pre>       5    <br> 1:30 to 2:30   </pre>
+                </th>
+                <th>
+                    <pre>       6    <br> 2:30 to 4:00  </pre>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td colspan="2">
+                    <pre>           <br>             <b>English </b>    <br>12th A                  Sir Fahad</pre>
+                </td>
+                <td rowspan="5">
+                    <pre>     <b> BREAK </b> </pre>
+                </td>
+                <td>
+                    <pre><br>     <b> Chemistry</b><br>12 A     Sir Ashfaq</pre>
+                </td>
+                <td rowspan="5">
+                    <pre>      <b> BREAK</b></pre>
+                </td>
+                <td>
+                    <pre>    <br> </pre>
+                </td>
+                <td rowspan="5">
+                    <pre>   <b>Lunch And<br>  Prayer Break</b></pre>
+                </td>
+                <td colspan="2">
+                    <pre> <br>            <b>Biology</b> <br>12 B                    Sir Siraj</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td colspan="2">
+                    <pre>           <br>              <b>Math</b>    <br>12th B                  Sir Bilal</pre>
+                </td>
+                <td>
+                    <pre><br>      <b> Physics</b><br>12 b        Sir Ali</pre>
+                </td>
+                <td>
+                    <pre><br>        <b> URDU </b><BR>12 B      Sir Khuram</BR></pre>
+                </td>
+                <td colspan="2">
+                    <pre> <br>            <b>Zoology</b> <br>12 B                    Sir Siraj</pre>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td> </td>
+                <td>
+                    <pre>   <br> <br> </pre>
+                </td>
+                <td> </td>
+                <td>
+                    <pre><br>       <b>Computer</b><BR>12 A      Sir Farhat</BR></pre>
+                </td>
+                <td colspan="2">
+                    <pre> <br>            <b>Biology</b> <br>12 B                    Sir Siraj</pre>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td colspan="2">
+                    <pre>           <br>            <b>Languages</b>    <br>12th A                  Sir Fahad</pre>
+                </td>
+                <td> <br> </td>
+                <td>
+                    <pre><br>       <b>P.studies</b><BR>12 A       Sir Irfan</pre>
+                </td>
+                <td colspan="2">
+                    <pre> <br>            <b>Zoology</b> <br>12 B                    Sir Siraj</pre>
+                </td>
+
+            </tr>
+            <tr>
+                <td> Friday</td>
+                <td colspan="2">
+                    <pre>           <br>           <b>Trignometry</b>   <br>12th B                  Sir Bilal</pre>
+                </td>
+                <td>
+                    <pre><br>     <b> Chemistry </b><br>12 A     Sir Ashfaq</pre>
+                </td>
+                <td>
+                    <pre>    <br>    </pre>
+                </td>
+                <td>
+                    <pre> <br></pre>
+                </td>
+                <td>
+                    <pre> <br> <br> </pre>
+                </td>
+            </tr>
+            </tbod>
+    </table>
+    <p> genrated by alyanshah </p>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
