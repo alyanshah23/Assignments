@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    color: rgb(16, 12, 232);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+body {
+    background-image: url(/images/watercolour-green-background_78370-1882.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    border: 10px solid white;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.victoria {
+    background-color: #a8f0f0;
+    margin: 0px;
+    text-align: right;
+    padding: 10px;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+#orange {
+    font-size: 25px;
+    margin: 0px;
+
+}
+
+.dflex {
+    display: flex;
+}
+
+#purple {
+    border-bottom: 2px dashed blue;
+}
+
+.spatulas {
+    border: 4px solid #c2e9e9;
+    background-color: #e8fbfb;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+.spatulas1 {
+    border: 4px solid #c2e9e9;
+    background-color: #e8fbfb;
+    padding: 5px;
+    margin: 10px 0px 0px 240px;
+    
+}
+
+img {
+    float: right;
+}
+
+.list {
+    display: flex;
+}
+
+.list1 {
+    border: 4px solid #c2e9e9;
+    background-color: #e8fbfb;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}

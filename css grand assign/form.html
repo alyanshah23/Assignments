@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="/css grand assign/form.css">
+</head>
+
+<body>
+    <div class="heading1">
+        <h1>Payment form</h1>
+    </div>
+    <div class="form">
+        <form action="">
+            <label style="padding-left: 20px;" for="details">Step 1:Your Details</label>
+
+            <div class="details">
+                <div class="nme">
+                    <label for="name">Name</label>
+                    <input type="text" name="fname" id="fname" placeholder="First and Last name"
+                        style="margin-left: 20px;">
+                </div>
+                <div class="nme">
+                    <label for="name">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com"
+                        style="margin-left: 20px;">
+                </div>
+                <div class="nme">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="+92 300 0000000" style="margin-left: 20px;">
+                </div>
+            </div>
+            <label for="address" style="padding-left: 20px;">Step 2:Your Delivery address</label>
+
+            <div class="details">
+                <div class="address">
+                    <div class="nme">
+                        <label for="delivery">Address</label>
+                        <textarea rows="4" cols="30" style="margin-left: 20px;"></textarea>
+                    </div>
+                    <div class="nme">
+                        <label for="post">Post Code</label>
+                        <input type="number" name="num" id="num" style="margin-left: 2px;">
+                    </div>
+                    <div class="nme">
+                        <label for="country">Country</label>
+                        <input type="text" name="country" id="country" style="margin-left: 15px;">
+                    </div>
+                </div>
+            </div>
+            <label for="card" style="padding-left: 20px;">Step 3:Your card details</label>
+            <div class="details">
+                <div class=" nme">
+                    <label for="card2">Card type</label><br>
+                    <input type="radio" name="visa" id="visa"><label for="visa">Visa</label>
+                    <input type="radio" name="debit" id="debit"><label for="visa">Debit</label>
+                    <input type="radio" name="mcard" id="mcard"><label for="visa">Mastercard</label>
+                </div>
+                <div class="nme">
+                    <label for="post">Card Number</label>
+                    <input type="number" name="num" id="num" style="margin-left: 2px;">
+                </div>
+                <div class="nme">
+                    <label for="post">Security Code</label>
+                    <input type="number" name="num" id="num" style="margin-left: 2px;">
+                </div>
+                <div class="nme">
+                    <label for="post">Name on Card</label>
+                    <input type="text" name="text" id="text" placeholder="Exact Name as on the card" style="margin-left: 2px;">
+                </div>
+
+
+
+
+
+
+
+                <div class="btndiv">
+                    <input type="submit" id="btn" value="BUY IT!">
+                </div>
+
+
+
+        </form>
+    </div>
+</body>
+
+</html>

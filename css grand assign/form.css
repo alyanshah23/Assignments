@@ -1,0 +1,36 @@
+body{
+    background-color: aquamarine;
+}
+.heading1{
+    text-align: center;
+}
+.form{
+    margin-left: 600px;
+    background-color: cadetblue;
+    width: 350px;
+    height: 670px;
+    padding: 20px;
+}
+.details{
+    padding: 20px;
+}
+.nme{
+    background-color: rgba(240, 248, 255, 0.212);
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 8px;
+    
+}
+#btn{
+    background-color: black;
+    color: antiquewhite;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 20px;
+}
+.btndiv{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    
+}
