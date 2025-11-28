@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex; gap: 10px;">
+        <div style="background-color: bisque; text-align: center; width: 300px; padding: 10px;">
+            <h1>Even Odd Checker</h1>
+            <input id="evod" type="number">
+            <br><br>
+            <button onclick="checkeven()" style="padding: 3px 72px;">Click</button>
+            <br><br>
+            <div id="result1"
+                style="background-color:rgb(3, 44, 68) ;width: 176px;height: 30px; margin: 0 auto;color: aliceblue;padding: 6px;">
+            </div>
+        </div>
+        <div style="background-color: bisque; text-align: center; width: 300px; padding: 10px;">
+            <h1>Age Checker</h1>
+            <input id="age" type="number">
+            <br><br>
+            <button onclick="checkage()" style="padding: 3px 72px;">Click</button>
+            <br><br>
+            <div id="result2"
+                style="background-color:rgb(3, 44, 68) ;width: 176px;height: 30px; margin: 0 auto;color: aliceblue;padding: 6px;">
+            </div>
+        </div>
+        <div style="background-color: bisque; text-align: center; width: 300px; padding: 10px;">
+            <h1>Vowel Checker</h1>
+            <input id="wow" type="text" maxlength="1">
+            <br><br>
+            <button onclick="checkletter()" style="padding: 3px 72px;">Click</button>
+            <br><br>
+            <div id="result3"
+                style="background-color:rgb(3, 44, 68) ;width: 176px;height: 30px; margin: 0 auto;color: aliceblue;padding: 6px;">
+            </div>
+        </div>
+        <div style="background-color: bisque; text-align: center; width: 300px; padding: 10px;">
+            <h1>Even odd and + - Checker </h1>
+            <input id="num" type="number">
+            <br><br>
+            <button onclick="checknum()" style="padding: 3px 72px;">Click</button>
+            <br><br>
+            <div class="" style="display: flex; gap: 2px;">
+                <div id="result4"
+                    style="background-color:rgb(3, 44, 68) ;width: 100px;height: 30px; margin: 0 auto;color: aliceblue;padding: 6px;">
+                </div>
+                <div id="result5"
+                    style="background-color:rgb(3, 44, 68) ;width: 100px;height: 30px; margin: 0 auto;color: aliceblue;padding: 6px;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="display: flex; gap: 10px; margin: 5px;">
+        <div style="background-color: bisque; text-align: center; width: 300px; padding: 10px;">
+            <h1>Log in</h1>
+            <label for="name">Enter Username</label><br>
+            <input id="username" type="text"><br>
+            <label for="pwd">Enter Password</label><br>
+            <input id="pwd" type="password">
+            <br><br>
+            <button onclick="login()" style="background-color:rgb(3, 44, 68) ;width: 100px;color: aliceblue;">log
+                in</button>
+            <div id="result6"
+                style="background-color:rgb(3, 44, 68) ;width: 176px;height: 30px; margin: 3px auto;color: aliceblue;padding: 6px;">
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkeven() {
+            let a = document.getElementById("evod").value;
+            let evod = Number(a)
+            if (!evod) {
+                document.getElementById("result1").innerHTML = "Number Likh Number";
+            }
+            else if (isNaN(evod)) {
+                document.getElementById("result1").innerHTML = "Please Enter A Number";
+            }
+            else {
+                if (evod % 2 === 0) {
+                    document.getElementById("result1").innerHTML = "Number is Even";
+                }
+                else {
+                    document.getElementById("result1").innerHTML = "Number is Odd";
+                }
+            }
+        }
+        function checkage() {
+            let n = document.getElementById("age").value;
+            let age = Number(n)
+            if (isNaN(age)) {
+                document.getElementById("result2").innerHTML = "Please Enter A Number";
+            }
+            else {
+                if (age >= 18) {
+                    document.getElementById("result2").innerHTML = "Adult";
+                }
+                else if (age === 0) {
+                    document.getElementById("result2").innerHTML = "you are not born";
+                }
+                else {
+                    document.getElementById("result2").innerHTML = "Minor";
+                }
+            }
+        }
+        function checkletter() {
+            let letter = document.getElementById("wow").value.toLowerCase();
+
+            if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+                document.getElementById("result3").innerHTML = "Vowel";
+            } else if (!letter) {
+                document.getElementById("result3").innerHTML = "you haven't learned vowels yet";
+            }
+            else {
+                document.getElementById("result3").innerHTML = "Consonant";
+            }
+        }
+        function checknum() {
+            let g = document.getElementById("num").value;
+            let num = Number(g)
+            if (isNaN(num) || (g === "")) {
+                document.getElementById("result4").innerHTML = "Number likh ada";
+                document.getElementById("result5").innerHTML = "Number likh ada";
+                return;
+            }
+            if (num === 0) {
+                document.getElementById("result4").innerHTML = "Number is zero";
+                document.getElementById("result5").innerHTML = "Zero is even ";
+                return;
+            }
+            if (num > 0) {
+                document.getElementById("result4").innerHTML = "Positive Number";
+            }
+            else if (num < 0) {
+                document.getElementById("result4").innerHTML = "Negative Number";
+            }
+            if (num % 2 === 0) {
+                document.getElementById("result5").innerHTML = "Even Number";
+            }
+            else if (num % 2 !== 0) {
+                document.getElementById("result5").innerHTML = "Odd Number";
+            }
+
+
+        }
+        function login(){
+            let u = document.getElementById("username").value;
+            let p = document.getElementById("pwd").value;
+            const correctu = "ali"
+            const correctp = "12345"
+            if (u === "" || p === "") {
+                document.getElementById("result6").innerHTML = "Emter Username And Password";return;
+            }
+            if (u === correctu && p === correctp){
+                document.getElementById("result6").innerHTML = "Logged in";return;
+            }
+            else {
+                document.getElementById("result6").innerHTML = "Invalid username or password";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
