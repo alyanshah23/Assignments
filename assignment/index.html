@@ -85,6 +85,22 @@
                 style="background-color:rgb(3, 44, 68) ;width: 176px;height: 30px; margin: 3px auto;color: aliceblue;padding: 6px;">
             </div>
         </div>
+        <div style="background-color: bisque; text-align: center; width: 300px; padding: 10px;">
+            <h1>Pass or fail</h1>
+            <label for="marks1">Enter your marks of sub 1 </label><br>
+            <input id="m1" type="number"><br>
+            <label for="marks2">Enter your marks of sub 2</label><br>
+            <input id="m2" type="number"><br>
+            <label for="marks3">Enter your marks of sub 3</label><br>
+            <input type="number" id="m3">
+            <br>
+            <p>totaol marks = 200</p>
+            <button onclick="calculatemarks()"
+                style="background-color:rgb(3, 44, 68) ;width: 50px;color: aliceblue;">=</button>
+            <div id="result8"
+                style="background-color:rgb(3, 44, 68) ;width: 176px;height: 30px; margin: 3px auto;color: aliceblue;padding: 6px;">
+            </div>
+        </div>
     </div>
     <script>
         function checkeven() {
@@ -182,16 +198,44 @@
             let x = Number(document.getElementById("number1").value);
             let y = Number(document.getElementById("number2").value);
             let op = (document.getElementById("op").value);
-            if (isNaN(x) || isNaN(y))  {
-                document.getElementById("result7").innerHTML = "Number ta likh mama";return;
+            if (isNaN(x) || isNaN(y)) {
+                document.getElementById("result7").innerHTML = "Number ta likh mama"; return;
             }
             let jwab;
-            if (op === "+") jwab = x + y ;
-            else if (op === "-") jwab = x - y ;
-            else if (op === "*") jwab = x * y ;
-            else if (op === "/") jwab = x / y ;
+            if (op === "+") jwab = x + y;
+            else if (op === "-") jwab = x - y;
+            else if (op === "*") jwab = x * y;
+            else if (op === "/") jwab = x / y;
             else jwab = "galat operation"
-            document.getElementById("result7").innerHTML = "the answer is =  " + jwab ;
+            document.getElementById("result7").innerHTML = "the answer is =  " + jwab;
+        }
+        function calculatemarks() {
+            if (
+                document.getElementById("m1").value === "" ||
+                document.getElementById("m2").value === "" ||
+                document.getElementById("m3").value === ""
+            ) {
+                document.getElementById("result8").innerHTML = "Khali dabba na chor mama";
+                return;
+            }
+            let j = Number(document.getElementById("m1").value);
+            let k = Number(document.getElementById("m2").value);
+            let l = Number(document.getElementById("m3").value);
+            if (isNaN(j) || isNaN(k) || isNaN(l)) {
+                document.getElementById("result8").innerHTML = "Number ta likh mama"; return;
+            }
+            let total = j + k + l;
+            const t = 150;
+            if (total >= 120) {
+                document.getElementById("result8").innerHTML = "you are pass. you secured = " + total;
+            }
+            else {
+                document.getElementById("result8").innerHTML = "You are fail. You secured = " + total;
+            }
+
+
+
+
         }
     </script>
 </body>
