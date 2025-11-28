@@ -70,6 +70,21 @@
                 style="background-color:rgb(3, 44, 68) ;width: 176px;height: 30px; margin: 3px auto;color: aliceblue;padding: 6px;">
             </div>
         </div>
+        <div style="background-color: bisque; text-align: center; width: 300px; padding: 10px;">
+            <h1>Calculator</h1>
+            <label for="number1">Enter a Number</label><br>
+            <input id="number1" type="number"><br>
+            <label for="number2">Enter Second number</label><br>
+            <input id="number2" type="number"><br>
+            <label for="op">Enter a operation</label><br>
+            <input type="text" maxlength="1" id="op">
+            <br><br>
+            <button onclick="calculate()"
+                style="background-color:rgb(3, 44, 68) ;width: 50px;color: aliceblue;">=</button>
+            <div id="result7"
+                style="background-color:rgb(3, 44, 68) ;width: 176px;height: 30px; margin: 3px auto;color: aliceblue;padding: 6px;">
+            </div>
+        </div>
     </div>
     <script>
         function checkeven() {
@@ -148,22 +163,36 @@
 
 
         }
-        function login(){
+        function login() {
             let u = document.getElementById("username").value;
             let p = document.getElementById("pwd").value;
             const correctu = "ali"
             const correctp = "12345"
             if (u === "" || p === "") {
-                document.getElementById("result6").innerHTML = "Emter Username And Password";return;
+                document.getElementById("result6").innerHTML = "Emter Username And Password"; return;
             }
-            if (u === correctu && p === correctp){
-                document.getElementById("result6").innerHTML = "Logged in";return;
+            if (u === correctu && p === correctp) {
+                document.getElementById("result6").innerHTML = "Logged in"; return;
             }
             else {
                 document.getElementById("result6").innerHTML = "Invalid username or password";
             }
         }
-
+        function calculate() {
+            let x = Number(document.getElementById("number1").value);
+            let y = Number(document.getElementById("number2").value);
+            let op = (document.getElementById("op").value);
+            if (isNaN(x) || isNaN(y))  {
+                document.getElementById("result7").innerHTML = "Number ta likh mama";return;
+            }
+            let jwab;
+            if (op === "+") jwab = x + y ;
+            else if (op === "-") jwab = x - y ;
+            else if (op === "*") jwab = x * y ;
+            else if (op === "/") jwab = x / y ;
+            else jwab = "galat operation"
+            document.getElementById("result7").innerHTML = "the answer is =  " + jwab ;
+        }
     </script>
 </body>
 
