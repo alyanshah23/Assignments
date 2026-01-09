@@ -21,12 +21,14 @@
     <button onclick="check50()">Check sum Greater or lesser than 50</button>
     <div id="result3"></div>
     <br><br><br>
-    <input type="numebr" id="q4num1" placeholder="enter first number"><br>
+    <input type="number" id="q4num1" placeholder="enter first number"><br>
     <input type="number" id="q4num2" placeholder="enter second number"><br>
     <button onclick="check100()">Multiply and Check sum Greater or lesser than 100</button><br>
     <div id="result4"></div>
-
-
+    <br><br><br>
+    <input type="number" id="q5num1" placeholder="enter obt marks outof 100"><br>
+    <button onclick="passfail()">Check Pass or fail</button><br>
+    <div id="result5"></div>
 
 
     <script>
@@ -84,14 +86,27 @@
                 result4.innerText = (sum + " " + ("Result is Greater than 100"))
             }
             else if (sum === 100) {
-                result4.innerText = (("Result is") + " " +  sum )
+                result4.innerText = (("Result is") + " " + sum)
             }
-            else{
-                result4.innerText = ( sum + " "+ "Result is Lesser than 100")
+            else {
+                result4.innerText = (sum + " " + "Result is Lesser than 100")
             }
         }
-        
-  </script>
+        function passfail(){
+            const passingmarks = 40 ;
+            let g = Number(document.getElementById("q5num1").value);
+            let result5 = document.getElementById("result5");
+            if(document.getElementById("q5num1").value === ""){
+                result5.innerText = ("Enter A number")
+            }
+            else if (g > passingmarks){
+                result5.innerText = ("Congratulations You Passed!");
+            }
+            else{
+                result5.innerText = ("Fail !!!")
+            }
+        }
+    </script>
 </body>
 
 </html>
