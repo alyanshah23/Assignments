@@ -20,6 +20,11 @@
     <input type="number" id="q3num2" placeholder="enter second number"><br>
     <button onclick="check50()">Check sum Greater or lesser than 50</button>
     <div id="result3"></div>
+    <br><br><br>
+    <input type="numebr" id="q4num1" placeholder="enter first number"><br>
+    <input type="number" id="q4num2" placeholder="enter second number"><br>
+    <button onclick="check100()">Multiply and Check sum Greater or lesser than 100</button><br>
+    <div id="result4"></div>
 
 
 
@@ -67,7 +72,26 @@
                 result3.innerText = ((c + d) + " " + "Number is lesser than 50")
             }
         }
-    </script>
+        function check100() {
+            let e = Number(document.getElementById("q4num1").value);
+            let f = Number(document.getElementById("q4num2").value);
+            let result4 = document.getElementById("result4");
+            let sum = e * f;
+            if (document.getElementById("q4num1").value === "" || document.getElementById("q4num2").value === "") {
+                result4.innerText = ("enter correct numbers");
+            }
+            else if (sum > 100) {
+                result4.innerText = (sum + " " + ("Result is Greater than 100"))
+            }
+            else if (sum === 100) {
+                result4.innerText = (("Result is") + " " +  sum )
+            }
+            else{
+                result4.innerText = ( sum + " "+ "Result is Lesser than 100")
+            }
+        }
+        
+  </script>
 </body>
 
 </html>
