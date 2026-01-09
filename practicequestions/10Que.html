@@ -29,6 +29,10 @@
     <input type="number" id="q5num1" placeholder="enter obt marks outof 100"><br>
     <button onclick="passfail()">Check Pass or fail</button><br>
     <div id="result5"></div>
+    <br><br><br>
+    <input type="number" id="q6num1" placeholder="enter your age"><br>
+    <button onclick="checkage()">Check you can vote or no.</button><br>
+    <div id="result6"></div>
 
 
     <script>
@@ -92,18 +96,28 @@
                 result4.innerText = (sum + " " + "Result is Lesser than 100")
             }
         }
-        function passfail(){
-            const passingmarks = 40 ;
+        function passfail() {
+            const passingmarks = 40;
             let g = Number(document.getElementById("q5num1").value);
             let result5 = document.getElementById("result5");
-            if(document.getElementById("q5num1").value === ""){
+            if (document.getElementById("q5num1").value === "") {
                 result5.innerText = ("Enter A number")
             }
-            else if (g > passingmarks){
+            else if (g > passingmarks) {
                 result5.innerText = ("Congratulations You Passed!");
             }
-            else{
+            else {
                 result5.innerText = ("Fail !!!")
+            }
+        }
+        function checkage() {
+            let age = Number(document.getElementById("q6num1").value);
+            let result6 = document.getElementById("result6");
+            if (age >= 18){
+                result6.innerText =("you are eligible for voting");
+            }
+            else{
+                result6.innerText = ("you aren't eligible");
             }
         }
     </script>
