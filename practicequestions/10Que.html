@@ -33,6 +33,12 @@
     <input type="number" id="q6num1" placeholder="enter your age"><br>
     <button onclick="checkage()">Check you can vote or no.</button><br>
     <div id="result6"></div>
+    <br><br><br>
+    <input type="number" id="q7num1" placeholder="enter first number"><br>
+    <input type="number" id="q7num2" placeholder="enter second number"><br>
+    <button onclick="checkbignum()">check which number is Greater</button><br>
+    <div id="result7"></div>
+
 
 
     <script>
@@ -113,13 +119,32 @@
         function checkage() {
             let age = Number(document.getElementById("q6num1").value);
             let result6 = document.getElementById("result6");
-            if (age >= 18){
-                result6.innerText =("you are eligible for voting");
+            if (document.getElementById("q6num1").value === "") {
+                result6.innerText = ("enter correct age");
             }
-            else{
+            else if (age >= 18) {
+                result6.innerText = ("you are eligible for voting");
+            }
+            else {
                 result6.innerText = ("you aren't eligible");
             }
         }
+        function checkbignum() {
+            let number1 = Number(document.getElementById("q7num1").value);
+            let number2 = Number(document.getElementById("q7num2").value);
+            let result7 = document.getElementById("result7");
+            if (document.getElementById("q7num1").value === "" || document.getElementById("q7num2").value === "") {
+                result7.innerText = ("enter correct numbers");
+            }
+            else if (number1 > number2) {
+                result7.innerText = (number1 + " " + ("is Greater than") + " " + number2)
+            }
+            else if (number2 > number1) {
+                result7.innerText = (number2 + " " + ("is Greater than") + " " + number1)
+            }
+        }
+
+
     </script>
 </body>
 
