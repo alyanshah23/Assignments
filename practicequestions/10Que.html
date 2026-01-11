@@ -42,13 +42,17 @@
     <input type="number" id="q8num1" placeholder="enter number"><br>
     <button onclick="divby5()">Check Divisible by 5</button><br>
     <div id="result8"></div>
+    <br><br>
+    <input type="number" id="q9" placeholder="enter your salary"><br>
+    <button onclick="taxdeduct()">Check</button><br>
+    <div id="result9"></div>
 
 
 
 
     <script>
         function checknum1() {
-            let a = Number(document.getElementById("q1num1").value)
+            let a = Number(document.getElementById("q1num1").value);
             let result1 = document.getElementById("result1");
             if (document.getElementById("q1num1").value === "") {
                 result1.innerText = ("enter a correct number");
@@ -151,14 +155,33 @@
         function divby5() {
             let h = Number(document.getElementById("q8num1").value);
             let result8 = document.getElementById("result8");
-            if (h % 5 === 0){
+            if (h % 5 === 0) {
                 result8.innerText = ("Number is divisble by 5");
             }
-            else{
-                result8.innerText=("Number is not divisible by 5");
+            else {
+                result8.innerText = ("Number is not divisible by 5");
             }
         }
+        function taxdeduct() {
+            let salary = Number(document.getElementById("q9").value);
+            let result9 = document.getElementById("result9");
+            const slimit = 50000;
+            if (document.getElementById("q9").value === "") {
+                result9.innerText = ("enter correct amount");
+            }
+            else if (salary <= slimit) {
+                result9.innerText = ("No tax will be applied");
+            }
+            else {
+              result9.innerText = "10% tax will be applied, please wait...";
+                setTimeout(() => { 
+                    let tax = salary * 0.10;
+                    let remaining = salary - tax ;
+                    result9.innerText=`Tax : ${tax} | Remaining Amount : ${remaining}`;
+                 }, 5000)
+            }
 
+        }
     </script>
 </body>
 
