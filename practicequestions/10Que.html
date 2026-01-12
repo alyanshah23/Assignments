@@ -11,16 +11,16 @@
     <input type="number" id="q1num1"><br>
     <button onclick="checknum1()">check postive or negative </button>
     <div id="result1"></div>
-    <br><br><br>
+    <br><br>
     <input type="number" id="q2num1"><br>
     <button onclick="checkevod()">Check Even or Odd</button>
     <div id="result2"></div>
-    <br><br><br>
+    <br><br>
     <input type="number" id="q3num1" placeholder="enter first number"><br>
     <input type="number" id="q3num2" placeholder="enter second number"><br>
     <button onclick="check50()">Check sum Greater or lesser than 50</button>
     <div id="result3"></div>
-    <br><br><br>
+    <br><br>
     <input type="number" id="q4num1" placeholder="enter first number"><br>
     <input type="number" id="q4num2" placeholder="enter second number"><br>
     <button onclick="check100()">Multiply and Check sum Greater or lesser than 100</button><br>
@@ -29,16 +29,16 @@
     <input type="number" id="q5num1" placeholder="enter obt marks outof 100"><br>
     <button onclick="passfail()">Check Pass or fail</button><br>
     <div id="result5"></div>
-    <br><br><br>
+    <br><br>
     <input type="number" id="q6num1" placeholder="enter your age"><br>
     <button onclick="checkage()">Check you can vote or no.</button><br>
     <div id="result6"></div>
-    <br><br><br>
+    <br><br>
     <input type="number" id="q7num1" placeholder="enter first number"><br>
     <input type="number" id="q7num2" placeholder="enter second number"><br>
     <button onclick="checkbignum()">check which number is Greater</button><br>
     <div id="result7"></div>
-    <br><br><br>
+    <br><br>
     <input type="number" id="q8num1" placeholder="enter number"><br>
     <button onclick="divby5()">Check Divisible by 5</button><br>
     <div id="result8"></div>
@@ -46,7 +46,11 @@
     <input type="number" id="q9" placeholder="enter your salary"><br>
     <button onclick="taxdeduct()">Check</button><br>
     <div id="result9"></div>
-
+    <br><br>
+    <input id="username" placeholder="Enter username"><br>
+    <input id="pwd" placeholder="Enter password "><br>
+    <button onclick="login()">Login</button><br>
+    <div id="result10"></div>
 
 
 
@@ -173,14 +177,33 @@
                 result9.innerText = ("No tax will be applied");
             }
             else {
-              result9.innerText = "10% tax will be applied, please wait...";
-                setTimeout(() => { 
+                result9.innerText = "10% tax will be applied, please wait...";
+                setTimeout(() => {
                     let tax = salary * 0.10;
-                    let remaining = salary - tax ;
-                    result9.innerText=`Tax : ${tax} | Remaining Amount : ${remaining}`;
-                 }, 5000)
+                    let remaining = salary - tax;
+                    result9.innerText = `Tax : ${tax} | Remaining Amount : ${remaining}`;
+                }, 5000)
             }
 
+        }
+        function login() {
+            const user1 = "farooq"
+            const user1pwd = "abc1234"
+            let username = document.getElementById("username").value;
+            let pwd = document.getElementById("pwd").value;
+            let result10 = document.getElementById("result10");
+            if (document.getElementById("username").value === "" || document.getElementById("pwd").value === "") {
+                result10.innerText = ("All Feilds Are required");
+            }
+            else if (username === user1 && pwd === user1pwd) {
+                result10.innerText = ("we are checking,plz wait...")
+                setTimeout(() => {
+                    alert("logged in Successfully");
+                }, 5000)
+            }
+            else {
+                result10.innerText = ("Username or Password is Incorrect");
+            }
         }
     </script>
 </body>
