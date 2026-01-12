@@ -172,174 +172,207 @@
         // }
 
         //  question 7
-        let menu = `
-        Choose an option:
-        1. Check week schedule
-        2. Check your Grade
-        3. Check month name
-        4. Check Availble Fruit
-        5. Calculator
-        6. Signal lights Meaning
-        `;
-        let choice = prompt(menu);
-        choice = Number(choice);
-        switch (choice) {
+        // let menu = `
+        // Choose an option:
+        // 1. Check week schedule
+        // 2. Check your Grade
+        // 3. Check month name
+        // 4. Check Availble Fruit
+        // 5. Calculator
+        // 6. Signal lights Meaning
+        // `;
+        // let choice = prompt(menu);
+        // choice = Number(choice);
+        // switch (choice) {
+        //     case 1:
+        //         let day = prompt("Enter a weekday").toLowerCase();
+        //         switch (day) {
+        //             case "monday":
+        //                 document.write("english class");
+        //                 break;
+        //             case "tuesday":
+        //                 document.write("math class");
+        //                 break;
+        //             case "wednesday":
+        //                 document.write("psychology class");
+        //                 break;
+        //             case "thursday":
+        //                 document.write("islamic education class");
+        //                 break;
+        //             case "friday":
+        //                 document.write("physics class");
+        //                 break;
+        //             case "saturday":
+        //                 document.write("off");
+        //                 break;
+        //             case "sunday":
+        //                 document.write("off");
+        //                 break;
+        //             default:
+        //                 document.write("Please enter a valid weekday (Monday-Sunday).")
+        //         }
+        //         break;
+        //     case 2:
+        //         let grade = prompt("Enter you grade (A-D):").toUpperCase();
+        //         switch (grade) {
+        //             case "A":
+        //                 document.write("Excellent job");
+        //                 break;
+        //             case "B":
+        //                 document.write("Good job");
+        //                 break;
+        //             case "C":
+        //                 document.write("Pass");
+        //                 break;
+        //             case "D":
+        //                 document.write("Fail");
+        //                 break;
+        //             default:
+        //                 document.write("Enter only A-D ");
+        //         }
+        //         break;
+        //     case 3:
+        //         let month = prompt("Enter month number (1-12):");
+        //         month = Number(month)
+        //         switch (month) {
+        //             case 1:
+        //                 document.write("January");
+        //                 break;
+        //             case 2:
+        //                 document.write("Feburary");
+        //                 break;
+        //             case 3:
+        //                 document.write("March");
+        //                 break;
+        //             case 4:
+        //                 document.write("April");
+        //                 break;
+        //             case 5:
+        //                 document.write("May");
+        //                 break;
+        //             case 6:
+        //                 document.write("june");
+        //                 break;
+        //             case 7:
+        //                 document.write("july");
+        //                 break;
+        //             case 8:
+        //                 document.write("august");
+        //                 break;
+        //             case 9:
+        //                 document.write("September");
+        //                 break;
+        //             case 10:
+        //                 document.write("october");
+        //                 break;
+        //             case 11:
+        //                 document.write("November");
+        //                 break;
+        //             case 12:
+        //                 document.write("December");
+        //                 break;
+        //             default:
+        //                 document.write("Enter only 1-12 ");
+        //         }
+        //         break;
+        //     case 4:
+        //         let fruit = prompt("Enter a number for chossing a fruit (1-5):");
+        //         fruit = Number(fruit)
+        //         switch (fruit) {
+        //             case 1:
+        //                 document.getElementById("img1").style.display = "block";
+        //                 break;
+        //             case 2:
+        //                 document.getElementById("img2").style.display = "block";
+        //                 break;
+        //             case 3:
+        //                 document.getElementById("img3").style.display = "block";
+        //                 break;
+        //             case 4:
+        //                 document.getElementById("img4").style.display = "block";
+        //                 break;
+        //             case 5:
+        //                 document.getElementById("img5").style.display = "block";
+        //                 break;
+        //             default:
+        //                 document.write("enter correct Number");
+        //         }
+        //         break;
+        //     case 5:
+        //         let num1 = Number(prompt("Enter FIrst Number"));
+        //         let operator = prompt("use only + , - , * , / :");
+        //         let num2 = Number(prompt("Enter Second Number"));
+        //         let result;
+        //         switch (operator) {
+        //             case "+":
+        //                 result = num1 + num2;
+        //                 break;
+        //             case "-":
+        //                 result = num1 - num2;
+        //                 break;
+        //             case "*":
+        //                 result = num1 * num2;
+        //                 break;
+        //             case "/":
+        //                 result = num1 / num2;
+        //                 break;
+        //             default:
+        //                 result = "Invalid operator";
+        //         }
+        //         document.write("Result is:" + result)
+        //         break;
+        //     case 6:
+        //         let signal = prompt("Enter color : (red,yellow,green)").toLowerCase();
+        //         switch (signal) {
+        //             case "red":
+        //                 document.write("stop");
+        //                 break;
+        //             case "yellow":
+        //                 document.write("Get Ready");
+        //                 break;
+        //             case "green":
+        //                 document.write("GO");
+        //                 break;
+        //             default:
+        //                 document.write("Enter valid color: red, yellow, or green")
+        //         }
+        //         break;
+        //     default:
+        //         document.write("Select only between 1-7")
+        // }
+
+        // question 8
+        let balance = 30000;
+        let choice2 = Number(prompt(`
+        Atm Menu
+        1. Check Balance
+        2. Deposit
+        3. Withdraw
+        4. Exit
+        `))
+        switch (choice2) {
             case 1:
-                let day = prompt("Enter a weekday").toLowerCase();
-                switch (day) {
-                    case "monday":
-                        document.write("english class");
-                        break;
-                    case "tuesday":
-                        document.write("math class");
-                        break;
-                    case "wednesday":
-                        document.write("psychology class");
-                        break;
-                    case "thursday":
-                        document.write("islamic education class");
-                        break;
-                    case "friday":
-                        document.write("physics class");
-                        break;
-                    case "saturday":
-                        document.write("off");
-                        break;
-                    case "sunday":
-                        document.write("off");
-                        break;
-                    default:
-                        document.write("Please enter a valid weekday (Monday-Sunday).")
-                }
+                alert("Balance:" + balance);
                 break;
             case 2:
-                let grade = prompt("Enter you grade (A-D):").toUpperCase();
-                switch (grade) {
-                    case "A":
-                        document.write("Excellent job");
-                        break;
-                    case "B":
-                        document.write("Good job");
-                        break;
-                    case "C":
-                        document.write("Pass");
-                        break;
-                    case "D":
-                        document.write("Fail");
-                        break;
-                    default:
-                        document.write("Enter only A-D ");
-                }
+                let deposit = Number(prompt("Enter amount to deposit:"));
+                balance = balance + deposit;
+                alert("New BAlance is: " + balance)
                 break;
             case 3:
-                let month = prompt("Enter month number (1-12):");
-                month = Number(month)
-                switch (month) {
-                    case 1:
-                        document.write("January");
-                        break;
-                    case 2:
-                        document.write("Feburary");
-                        break;
-                    case 3:
-                        document.write("March");
-                        break;
-                    case 4:
-                        document.write("April");
-                        break;
-                    case 5:
-                        document.write("May");
-                        break;
-                    case 6:
-                        document.write("june");
-                        break;
-                    case 7:
-                        document.write("july");
-                        break;
-                    case 8:
-                        document.write("august");
-                        break;
-                    case 9:
-                        document.write("September");
-                        break;
-                    case 10:
-                        document.write("october");
-                        break;
-                    case 11:
-                        document.write("November");
-                        break;
-                    case 12:
-                        document.write("December");
-                        break;
-                    default:
-                        document.write("Enter only 1-12 ");
-                }
+                let withdraw = Number(prompt("Enter amount to Withdraw:"));
+                balance = balance - withdraw;
+                alert("Remaining Amount is: " + balance)
                 break;
             case 4:
-                let fruit = prompt("Enter a number for chossing a fruit (1-5):");
-                fruit = Number(fruit)
-                switch (fruit) {
-                    case 1:
-                        document.getElementById("img1").style.display = "block";
-                        break;
-                    case 2:
-                        document.getElementById("img2").style.display = "block";
-                        break;
-                    case 3:
-                        document.getElementById("img3").style.display = "block";
-                        break;
-                    case 4:
-                        document.getElementById("img4").style.display = "block";
-                        break;
-                    case 5:
-                        document.getElementById("img5").style.display = "block";
-                        break;
-                    default:
-                        document.write("enter correct Number");
-                }
-                break;
-            case 5:
-                let num1 = Number(prompt("Enter FIrst Number"));
-                let operator = prompt("use only + , - , * , / :");
-                let num2 = Number(prompt("Enter Second Number"));
-                let result;
-                switch (operator) {
-                    case "+":
-                        result = num1 + num2;
-                        break;
-                    case "-":
-                        result = num1 - num2;
-                        break;
-                    case "*":
-                        result = num1 * num2;
-                        break;
-                    case "/":
-                        result = num1 / num2;
-                        break;
-                    default:
-                        result = "Invalid operator";
-                }
-                document.write("Result is:" + result)
-                break;
-            case 6:
-                let signal = prompt("Enter color : (red,yellow,green)").toLowerCase();
-                switch (signal) {
-                    case "red":
-                        document.write("stop");
-                        break;
-                    case "yellow":
-                        document.write("Get Ready");
-                        break;
-                    case "green":
-                        document.write("GO");
-                        break;
-                    default:
-                        document.write("Enter valid color: red, yellow, or green")
-                }
+                alert("Thank you! Good Bye");
                 break;
             default:
-                document.write("Select only between 1-7")
+                alert("choose only 1-4")
+
         }
+
+
     </script>
 </body>
 
