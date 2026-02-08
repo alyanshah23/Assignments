@@ -104,10 +104,115 @@
 
 
 
+      <!-- Question 14
+      Answer: foreach loop excecutes code on every element of array example
+            let array = [10, 20, 30, 40, 50, 60, 70,]
+            array.forEach((n) => {
+                  console.log(n * 8)
+            });
+
+            let fruits = ["appple", "mango", "orange"]
+            fruits.forEach(item);
+            function item(n) {
+                  console.log(n + " " + n)
+            }   -->
+
+      <!-- 
+      Question 15
+      Answer: forin performs loop on object properties
+      example: let student = {
+      name: "ali",
+      age: 16,
+      course: "english",
+      institution: "govt college",
+      }
+      for (let key in student) {
+      console.log(key + ": " + student[key])
+      } -->
+
+
+
+      <!-- Question 16
+      Answer: function sum(a, b) {     // first we will write the function keyword and will give it a name and
+                                       // give parameters so fucntion can work on those parameters
+      return a + b                     // then we will return the parametrs while adding them
+      }
+      console.log(sum(2, 2))           // then we will show the result by document.write or in console
+ -->
+
+
+
+
+      <!-- Question 17
+      Answer: const uppercase = letters => letters.toUpperCase();
+              console.log(uppercase("uppercase")
+       -->
+
+
+      <!-- Question 18
+      Answer: 
+            setTimeout(function () {
+            document.body.style.backgroundColor = "black"
+            document.body.style.color = "cadetblue"
+            console.log("welcome")
+            }, 5000) -->
+
+
+
+
+      <!-- Question 19
+      Answer: function sum(a, b) {
+      return a * b
+      }
+      console.log(sum(3, 3)) -->
+
+
+
+      <!-- Question 20
+      Answer: function loop() {
+      for (let i = 1; i <= 10; i++) { console.log(i) } } loop();
+       -->
+
+
+
+      <!-- 
+      Question 21
+      Answer:
+
+      <input type="number" id="marksbyuser">
+      <button onclick="calculate()">check result</button>
+      <div id="result"></div>
+
+      let marks = document.getElementById("marksbyuser");
+            let result = document.getElementById("result");
+
+            function calculate() {
+                  let numbers = Number(marks.value)
+                  if (isNaN(numbers) || numbers < 0 || numbers > 100) {
+                        result.innerText = ("Enter correct number");
+                  }
+                  else {
+                        if (numbers >= 80) {
+                              result.innerText = "A+";
+                        } else if (numbers >= 70) {
+                              result.innerText = "A";
+                        } else if (numbers >= 60) {
+                              result.innerText = "B";
+                        } else if (numbers >= 50) {
+                              result.innerText = "C";
+                        } else if (numbers >= 40) {
+                              result.innerText = "D";
+                        } else {
+                              result.innerText = "Fail";
+                        }
+                  }
+            }
+      
+      -->
 
 
       <script>
-          
+
       </script>
 
 </body>
