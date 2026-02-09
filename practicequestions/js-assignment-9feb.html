@@ -72,7 +72,7 @@
 
 
       <!-- Question 10
-      Answer: if esle: used in complex condtions 
+      Answer: if else: used in complex condtions 
                      : used for multiple variables 
             
             switch: used only for one variable 
@@ -211,7 +211,125 @@
       -->
 
 
+
+
+      <!-- Question 20 
+      Answer: using function saves times
+      code is readable and not lengthy
+      functionc can be used again and again 
+      can perform multiple actions easily  -->
+
+
+      <!-- Question 21
+      Answer:
+      <input type="number" id="agebyuser">
+      <button onclick="calculateage()">check</button>
+      <div id="result"></div>
+
+
+
+      let age = document.getElementById("agebyuser");
+            let result = document.getElementById("result");
+
+            function calculateage() {
+                  let numbers = Number(age.value)
+                  if (isNaN(numbers) || numbers < 0 || numbers > 150) {
+                        result.innerText = ("Enter correct age");
+                  }
+                  else {
+                        if (numbers >= 100) {
+                              result.innerText = "too old";
+                        } else if (numbers >= 80) {
+                              result.innerText = "old";
+                        } else if (numbers >= 60) {
+                              result.innerText = "senior";
+                        } else if (numbers >=18) {
+                              result.innerText = "eligible";
+                        } else {
+                              result.innerText = "not eligible";
+                        }
+                  }
+            } -->
+
+
+
+      <!-- 
+       Question 22
+      Answer:
+            let day = prompt(("enter a number 1-7"));
+            day = Number(day);
+            switch (day) {
+                  case 1:
+                        document.write("monday");
+                        break;
+                  case 2:
+                        document.write("tuesday");
+                        break;
+                  case 3:
+                        document.write("wednesday");
+                        break;
+                  case 4:
+                        document.write("thursday");
+                        break;
+                  case 5:
+                        document.write("friday");
+                        break;
+                  case 6:
+                        document.write("saturday");
+                        break;
+                  case 7:
+                        document.write("sunday");
+                        break;
+                  default:
+                        document.write("holiday for you only")
+            } -->
+
+
+
+      <!-- 
+      Question 23
+      Answer: if else: used in complex condtions 
+                     : used for multiple variables 
+            
+            switch: used only for one variable 
+                  : readable,simple and clean  -->
+
+
+
+
+      <!-- Question 24
+      Answer:  let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            array.forEach(item);
+            function item(n) {
+                  if (isNaN(n)) {
+                        console.log("number not correct")
+                  }
+                  else {
+                        if (n % 2 === 0) {
+                              console.log(n + ":   Number is even");
+                        }
+                        else {
+                              console.log();
+                        }
+                  }
+            } -->
+
+      <!-- 
+      Question 25
+      Answer: if no case matches with entered value default is executed -->
+
+
+
+      Question 26
+      Answer:
+
+
+      <!-- 
+      Question 27
+      Answer: break : stops the on loop iteration on which break is written
+      continue: skips the iteration on which continue is applied  -->
       <script>
+
 
       </script>
 
