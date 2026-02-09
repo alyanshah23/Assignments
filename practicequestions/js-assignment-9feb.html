@@ -321,11 +321,16 @@
       <!-- 
 
       Question 26
-      Answer:<input type="number" id="num1" placeholder="Enter first number"><br><br>
+      Answer:
+      
+      
+      <input type="number" id="num1" placeholder="Enter first number"><br><br>
       <input type="text" id="operation" placeholder="+,-,*,/"><br><br>
       <input type="number" id="num2" placeholder="Enter second number"><br><br>
       <button onclick="calculate()">=</button>
       <div id="result"></div>
+
+
       <script>
 
             function calculate() {
@@ -372,6 +377,113 @@
 
 
 
+      <!-- Question 28
+      Answer:            let marks = document.getElementById("marksbyuser");
+            let result = document.getElementById("result");
+
+            function calculate() {
+                  let numbers = Number(marks.value)
+                  if (isNaN(numbers) || numbers < 0 || numbers > 100) {
+                        result.innerText = ("Enter correct number");
+                  }
+                  else {
+                        if (numbers >= 80 && numbers <= 100) {
+                              result.innerText = "A+";
+                        } else if (numbers >= 70 && numbers <= 79) {
+                              result.innerText = "A";
+                        } else if (numbers >= 60 && numbers <= 69) {
+                              result.innerText = "B";
+                        } else if (numbers >= 50 && numbers <= 59) {
+                              result.innerText = "C";
+                        } else if (numbers >= 40 && numbers <= 49) {
+                              result.innerText = "D";
+                        } else {
+                              result.innerText = "Fail";
+                        }
+                  }
+            } -->
+
+
+
+
+
+      <!-- Section 1: Variables & Data Types (5 Questions)
+      Question 1
+      Answer:
+      var has function scope,will be overwritten if redeclared in same function
+      function testVar() {
+      var score = 50;
+      if (true) {
+      var score = 100;
+      console.log( score);
+      }
+      console.log(score);
+      }
+      testVar();
+
+      let has block scope , outside the block and inside the block both let are differnt
+      function testlet() {
+      let score = 50;
+      if (true) {
+      let score = 100;
+      console.log( score);
+      }
+      console.log(score);
+      }
+
+      testlet(); -->
+
+
+
+      <!-- Question 2
+      Answer:undefined comes bcz of JavaScript knows that this variable exists but its value is not assigned yet -->
+
+
+      <!-- Questions 3
+      Answer: variables declared with let or const cannot be accessed before they are initialized -->
+
+
+      <!-- Questions 4
+      Answer: just type is changed into string  from number -->
+
+
+      <!-- Questions 5
+      Answer:
+            let n = "007";
+            console.log(typeof (n))
+            n = Number(n)
+            console.log(n)
+            console.log(typeof (n))
+-->
+
+
+      <!-- Questions 6
+      Answer:
+          console.log(5 == "5") // == checks only value ignores the type
+       console.log(5==="5")// === checks value and type  strictly
+-->
+
+
+
+      <!-- 
+      Question 7
+      Answer: let n = 20;
+      console.log(n >= 10 && n <= 50)
+      
+      
+      console.log(n>= 10 || n <= 50)  -->
+
+
+
+
+Question 8
+Answer:
+
+      <script>
+
+
+
+      </script>
 
 </body>
 
