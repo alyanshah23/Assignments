@@ -150,6 +150,7 @@ https://drive.google.com/file/d/1JlwYstljn4eZg28yPuaHk5FvwUeNXC6x/view
     <button id="listbtn">click to add </button>
     <ul id="listparent"></ul>
     <button id="dltbtn">Delete item</button>
+    <button>Replace</button>
     <script>
         //    question 1
         let h = document.getElementById("heading")
@@ -179,11 +180,9 @@ https://drive.google.com/file/d/1JlwYstljn4eZg28yPuaHk5FvwUeNXC6x/view
             if (parent.lastChild) {
                 parent.removeChild(parent.lastChild)
             }
-            else if (!parent.lastChild) {
+            else{
                 alert("first add something")
             }
-
-
         })
     </script>
 </body>
