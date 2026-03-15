@@ -150,7 +150,14 @@ https://drive.google.com/file/d/1JlwYstljn4eZg28yPuaHk5FvwUeNXC6x/view
     <button id="listbtn">click to add </button>
     <ul id="listparent"></ul>
     <button id="dltbtn">Delete item</button>
-    <button>Replace</button>
+
+
+
+
+    <div id="container">
+        <h1 id="headrpl">heading</h1>
+        <button id="rpl">Replace</button>
+    </div>
     <script>
         //    question 1
         let h = document.getElementById("heading")
@@ -180,10 +187,23 @@ https://drive.google.com/file/d/1JlwYstljn4eZg28yPuaHk5FvwUeNXC6x/view
             if (parent.lastChild) {
                 parent.removeChild(parent.lastChild)
             }
-            else{
+            else {
                 alert("first add something")
             }
         })
+
+
+        let headrpl = document.getElementById("headrpl")
+        let rplbtn = document.getElementById("rpl")
+        let head2 = document.createElement("h1")
+        head2.innerText = "i am replacement of first heading"
+        let container= document.getElementById("container")
+
+        rplbtn.addEventListener("click", () => {
+           container.replaceChild(head2,headrpl)
+
+        })
+
     </script>
 </body>
 
