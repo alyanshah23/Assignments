@@ -1,0 +1,190 @@
+https://drive.google.com/file/d/1JlwYstljn4eZg28yPuaHk5FvwUeNXC6x/view
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Question 1
+    Answer:The DOM (Document Object Model) is a programming interface that represents
+    an HTML document as a tree structure of objects. JavaScript uses the DOM to access,
+    modify, and update HTML elements, styles, and content dynamically.
+    
+    
+    question 2
+    answer:
+    DOM tree structure shows how HTML elements are arranged in a tree form.
+    Parent:
+    A parent element is an element that contains other elements inside it.
+    Child:
+    A child element is an element that is inside a parent element.
+    Sibling:
+    Sibling elements are elements that have the same parent.
+
+
+    Quesstion 3
+    Answer:
+    DOM is important in JavaScript because it allows developers to interact
+    with HTML elements and make websites dynamic and responsive to user actions
+
+    Advantages of using DOM 
+    It makes interaction with the user easy
+    It changes static websites into dynamic websites
+    It allows realtime data updates on the webpage
+    
+    Disadvantages of not using DOM
+    User interaction becomes difficult
+    Websites remain static
+    Website content cannot update without reloading the page
+    
+    Difference between with DOM and without DOM
+    With DOM JavaScript can change content, style, and elements dynamically
+    Without DOM the webpage cannot change or respond to user actions
+    
+    Real example
+    A weather website uses DOM to update weather information in real time without refreshing the page
+
+
+    question 4
+    answer:
+    Both querySelector() and querySelectorAll() are DOM methods used to select HTML elements
+    querySelector() selects only the first element that matches the CSS selector
+    querySelectorAll() selects all elements that match the CSS selector
+    document.querySelector(".box")
+    This selects the first element with class box
+    document.querySelectorAll(".box")
+    This selects all elements with class box
+ 
+
+
+    question 5
+    answer:
+    getElementById()
+    This method selects an element using its unique id. Since id is unique, it selects only one element.
+    document.getElementById("para1")
+    exampe:
+    <p id="para1">Hello</p>
+    JavaScript can select this paragraph using its id.
+    
+    getElementsByClassName()
+    This method select all elements that have the same class name.
+    document.getElementsByClassName("para1")
+    example
+    <p class="para1">Hello</p>
+    JavaScript can select all elements that have the class para1.
+    
+    getElementsByTagName()
+    This method selects elements by their HTML tag name.
+    document.getElementsByTagName("p")
+    example
+    <p>Hello</p>
+    JavaScript can select all p (paragraph) elements on the page.
+
+
+
+
+    Question 6
+    Answer:
+    innerHTML
+    reads the inner HTML content of an element.
+    document.getElementById("box").innerHTML
+    Example:
+    document.getElementById("box").innerHTML = "<h2>Welcome</h2>"
+    
+    innerText
+    reads the inner text of an element.
+    document.getElementById("box").innerText
+    Example:
+    document.getElementById("box").innerText = "Hello World"
+    
+    textContent
+    returns or changes the text content of an element.
+    document.getElementById("box").textContent
+    Example:
+    document.getElementById("box").textContent = "JavaScript DOM"
+    
+    append
+    allows adding element/text at the end of any element.
+    element.append(content)
+    Example:
+    document.getElementById("box").append("New Text")
+    
+    appendChild
+    allows adding a child element at the end of a parent element.
+    parent.appendChild(child)
+    Example
+    let p = document.createElement("p")
+    document.getElementById("box").appendChild(p)
+    
+    -->
+
+
+
+    <!-- part 2
+     MCQS
+     1.Document Object Model
+     2.document
+     3.getElementById()
+     4.getElementsByClassName()
+     5.querySelector()
+     6.innerhtml
+     7.createElement()
+     8.prepend()
+     9.removeChild()
+     10.replaceChild(
+    -->
+
+
+
+    <h1 id="heading">text changer</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, earum?</p>
+    <button id="chng">click</button>
+
+    <h1>Grocery list</h1>
+    <input type="text" id="input-box" placeholder="Enter itemname">
+    <button id="listbtn">click to add </button>
+    <ul id="listparent"></ul>
+    <button id="dltbtn">Delete item</button>
+    <button>Replace</button>
+    <script>
+        //    question 1
+        let h = document.getElementById("heading")
+        let p = document.getElementById("para")
+        let btn = document.getElementById("chng")
+        btn.addEventListener("click", () => {
+            h.innerText = "Button clicked."
+            p.innerText = "text has been chnaged."
+        })
+
+
+        // question 2 and 3
+        let inputboxdata = document.getElementById("input-box")
+        let listbtn = document.getElementById("listbtn")
+
+
+        listbtn.addEventListener("click", () => {
+            let li = document.createElement("li")
+            li.innerText = inputboxdata.value
+            document.getElementById("listparent").appendChild(li)
+            inputboxdata.value = ""
+        })
+
+        let dlt = document.getElementById("dltbtn")
+        let parent = document.getElementById("listparent")
+        dlt.addEventListener("click", () => {
+            if (parent.lastChild) {
+                parent.removeChild(parent.lastChild)
+            }
+            else{
+                alert("first add something")
+            }
+        })
+    </script>
+</body>
+
+</html>
