@@ -52,38 +52,75 @@ https://drive.google.com/file/d/1JlwYstljn4eZg28yPuaHk5FvwUeNXC6x/view
 
     question 4
     answer:
-    these both selection methods are use to select any html element the differnce is that
-    query selector will select a query if there are multiple with the same name the very first will be selected 
-    document.queryselector("box") only first element will be selected with box classname
-
-
-    query selectorall will select all html elements with the same class name.
-     document.queryselectorall("box") all elements will be selected with box classname
-
-
+    Both querySelector() and querySelectorAll() are DOM methods used to select HTML elements
+    querySelector() selects only the first element that matches the CSS selector
+    querySelectorAll() selects all elements that match the CSS selector
+    document.querySelector(".box")
+    This selects the first element with class box
+    document.querySelectorAll(".box")
+    This selects all elements with class box
+ 
 
 
     question 5
     answer:
-    getelementbyid
-    selects a element carrying a id name , id is specific so it will be used specifically only for one element
-    <p id="para1"></p>
-    getelementbyid("para1")
-
-
-    getelementbyclassname
-    selects a element with desired classname 
-    <p class="para1"></p>
-    getelementbyclassname("para1")
-
-
+    getElementById()
+    This method selects an element using its unique id. Since id is unique, it selects only one element.
+    document.getElementById("para1")
+    exampe:
+    <p id="para1">Hello</p>
+    JavaScript can select this paragraph using its id.
+    
+    getElementsByClassName()
+    This method select all elements that have the same class name.
+    document.getElementsByClassName("para1")
+    example
+    <p class="para1">Hello</p>
+    JavaScript can select all elements that have the class para1.
+    
     getElementsByTagName()
-    selects a element by its tag
-    <p class="para1"></p>
-    getelementbytagnamename("p")
+    This method selects elements by their HTML tag name.
+    document.getElementsByTagName("p")
+    example
+    <p>Hello</p>
+    JavaScript can select all p (paragraph) elements on the page.
 
 
 
+
+    Question 6
+    Answer:
+    innerHTML
+    reads the inner HTML content of an element.
+    document.getElementById("box").innerHTML
+    Example:
+    document.getElementById("box").innerHTML = "<h2>Welcome</h2>"
+    
+    innerText
+    reads the inner text of an element.
+    document.getElementById("box").innerText
+    Example:
+    document.getElementById("box").innerText = "Hello World"
+    
+    textContent
+    returns or changes the text content of an element.
+    document.getElementById("box").textContent
+    Example:
+    document.getElementById("box").textContent = "JavaScript DOM"
+    
+    append
+    allows adding element/text at the end of any element.
+    element.append(content)
+    Example:
+    document.getElementById("box").append("New Text")
+    
+    appendChild
+    allows adding a child element at the end of a parent element.
+    parent.appendChild(child)
+    Example
+    let p = document.createElement("p")
+    document.getElementById("box").appendChild(p)
+    
     -->
 
 
@@ -91,18 +128,63 @@ https://drive.google.com/file/d/1JlwYstljn4eZg28yPuaHk5FvwUeNXC6x/view
     <!-- part 2
      MCQS
      1.Document Object Model
-     2.html
+     2.document
      3.getElementById()
      4.getElementsByClassName()
      5.querySelector()
-     6.
+     6.innerhtml
      7.createElement()
      8.prepend()
-     9.
-     10.
+     9.removeChild()
+     10.replaceChild(
     -->
-    <script>
 
+
+
+    <h1 id="heading">text changer</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, earum?</p>
+    <button id="chng">click</button>
+
+    <h1>Grocery list</h1>
+    <input type="text" id="input-box" placeholder="Enter itemname">
+    <button id="listbtn">click to add </button>
+    <ul id="listparent"></ul>
+    <button id="dltbtn">Delete item</button>
+    <script>
+        //    question 1
+        let h = document.getElementById("heading")
+        let p = document.getElementById("para")
+        let btn = document.getElementById("chng")
+        btn.addEventListener("click", () => {
+            h.innerText = "Button clicked."
+            p.innerText = "text has been chnaged."
+        })
+
+
+        // question 2 and 3
+        let inputboxdata = document.getElementById("input-box")
+        let listbtn = document.getElementById("listbtn")
+
+
+        listbtn.addEventListener("click", () => {
+            let li = document.createElement("li")
+            li.innerText = inputboxdata.value
+            document.getElementById("listparent").appendChild(li)
+            inputboxdata.value = ""
+        })
+
+        let dlt = document.getElementById("dltbtn")
+        let parent = document.getElementById("listparent")
+        dlt.addEventListener("click", () => {
+            if (parent.lastChild) {
+                parent.removeChild(parent.lastChild)
+            }
+            else if (!parent.lastChild) {
+                alert("first add something")
+            }
+
+
+        })
     </script>
 </body>
 
